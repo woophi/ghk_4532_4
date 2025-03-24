@@ -24,11 +24,7 @@ export const App = () => {
   }, []);
 
   const handleClick = () => {
-    // trackInAnalytics('TRANSFER_ACTIVES_FIRST_PAGE_CLICK', {
-    //     experimentNumber: 'GHK-4532',
-    //     experimentVariant: 'var1',
-    // });
-
+    window.gtag('event', '4532_transfer_var4');
     setStep('select');
   };
 
@@ -77,6 +73,7 @@ export const App = () => {
           title="Не получилось отправить заявку"
           subtitle="Нужно открыть брокерский счёт. Затем попробуйте снова, воспользовавшись формой для перевода активов"
           onClick={() => {
+            window.gtag('event', '4532_bs_var4');
             window.location.replace('alfabank://investments/open_brokerage_account');
           }}
         />
