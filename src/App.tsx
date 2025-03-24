@@ -5,33 +5,13 @@ import { PlaceholderScreen } from './placeholder-screen';
 import { appSt } from './style.css';
 import { TransferActivesBrokerLayout } from './transfer-actives-broker';
 import { TransferActivesCompleted } from './transfer-actives-completed';
-import { TransferActivesCard } from './transfer-actives/transfer-actives-card';
 import { TransferActivesFooter } from './transfer-actives/transfer-actives-footer';
 import { TransferActivesHead } from './transfer-actives/transfer-actives-head';
 import { TransferActivesSteps } from './transfer-actives/transfer-actives-steps';
 
 const stepsData = [
-  'Переведите к нам активы на сумму от 5000 ₽',
-  'Продержите положительный баланс 2 месяца',
-  'Получите акции в подарок',
-];
-
-const cardItems = [
-  {
-    title: '5 акций',
-    subtitle: 'за перевод активов от',
-    price: '5000 ₽',
-  },
-  {
-    title: '10 акций',
-    subtitle: 'за перевод активов от',
-    price: '10 000 ₽',
-  },
-  {
-    title: '20 акций',
-    subtitle: 'за перевод активов от',
-    price: '50 000 ₽',
-  },
+  'Переведите ценные бумаги или пополните брокерский счёт на сумму от 100 000 ₽ к нам',
+  'После этого с вами свяжется персональный брокер, назначит встречу в удобное для вас время, где он проведёт оценку вашего портфеля и даст рекомендации',
 ];
 
 export const App = () => {
@@ -62,13 +42,11 @@ export const App = () => {
         <>
           <div className={appSt.container}>
             <TransferActivesHead
-              title="Акции за перевод"
-              subtitle="Дарим до 20 акций крупнейших российских компаний каждому, кто переведёт активы в Альфа-Инвестиции"
+              title="Для выгодных инвестиций"
+              subtitle="Перейдите на сторону Альфа-Инвестиций и получите оценку вашего портфеля в подарок"
             />
 
             <TransferActivesSteps stepsData={stepsData} title="Всё просто" />
-            <TransferActivesCard title="Сколько акций вы можете получить" items={cardItems} />
-
             <TransferActivesFooter
               title="Как перевести активы"
               subtitle="По кнопке ниже. Хватит пары минуты, чтобы это сделать. А в офис приезжать не нужно 😉"
