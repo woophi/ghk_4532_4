@@ -74,7 +74,7 @@ export const App = () => {
           subtitle="Нужно открыть брокерский счёт. Затем попробуйте снова, воспользовавшись формой для перевода активов"
           onClick={() => {
             window.gtag('event', '4532_bs_var4');
-            window.location.replace('alfabank://investments/open_brokerage_account');
+            window.location.replace('https://alfa-mobile.alfabank.ru/mobile/goto/open_brokerage_account');
           }}
         />
       );
